@@ -9,6 +9,85 @@ def val(pro, valopt):
         except ValueError:
             print("Please enter a valid number.")
 
+def work4():
+    print('Why Choose Us for WiFi Installation?')
+    print('1. Expertise and Experience')
+    print('2. Customized Solutions')
+    print('3. Advanced Technology')
+    print('4. Affordable Pricing')
+    print('5. Security and Privacy')
+    info=val("Enter option:",[1, 2, 3, 4, 5])
+    
+    if info==1:
+        print('1. Highly Qualified Technicians')
+        print('2. Proven Track Record')
+        O=val("choose: ",[1, 2])
+        
+        if O==1:
+            print('\t-->Technicians with extensive training and industry certifications.\n \t -->Years of hands-on experience with different WiFi technologies and setups.')
+            
+        elif O==2:
+            print('\t-->Successful installations for residential, commercial, and industrial clients.\n \t -->Positive reviews and testimonials from satisfied customers.')
+        
+        else:
+            print('choosed info is not available ')
+    
+    elif info==2:
+        print('1. Tailored WiFi Setup')
+        print('2. Support for Various Devices')
+        C=val("choose: ",[1, 2])
+        
+        if C==1:
+            print('\t--> Analysis of the specific layout and needs of your space before installation.\n \t --> Recommendations for optimal router placement to ensure maximum coverage.')
+        
+        elif C==2:
+            print('\t-->Expertise in connecting a wide range of devices including smartphones, laptops, smart TVs, and IoT devices.\n \t --> Ability to configure both wired and wireless setups depending on your requirements.')
+        
+        else:
+            print('choosed info is not available ')
+    
+    elif info==3:
+        print ('1. Use of Latest Equipment')
+        print('2. Seamless Connectivity')
+        A=val("choose: ",[1, 2])
+        
+        if A==1:
+            print ('\t--> Deployment of the latest WiFi routers and repeaters for optimal performance.\n \t-->Integration of advanced technology like WiFi 6 or mesh networks for better speed and coverage')
+        
+        elif A==2:
+            print ('\t-->Solutions designed to ensure smooth, uninterrupted connectivity throughout your space.\n \t -->Tools for analyzing signal strength to fine-tune network performance.')
+        
+        else:
+            print('choosed info is not available ')   
+    
+    elif info==4:
+        print('1. Competitive Pricing Models')
+        print('2. Cost-Effective Solutions')
+        F=val("choose: ",[1, 2])
+        
+        if F==1:
+            print("\t-->Transparent and upfront pricing with no hidden fees.\n \t -->Flexible plans based on the scope of your WiFi needs (residential, commercial, enterprise).")
+        
+        elif F==2:
+            print('\t-->Offering value for money with high-quality installation and maintenance services.\n \t -->Discount packages for multi-installation sites (businesses or multiple rooms).')
+        
+        else:
+            print('choosed info is not available ')  
+   
+    elif info==5:
+        print('1. Secure Network Setup')
+        print('2. Safe Installation Practices')
+        S=val("choose: ",[1, 2])
+        
+        if S==1:
+            print('\t--> Implementation of strong encryption (WPA3, VPN, etc.) to protect your WiFi from unauthorized access.\n \t--> Advice on network privacy and security best practices.')
+        
+        elif S==2:
+            print('\t--> Adherence to safety standards and regulations during installation.\n \t--> Installation of firewalls and protection against external threats.')
+        
+        else:
+            print('choosed info is not available ')
+    opt()
 def work3():
     global p
     print('1.Upgrade physical SIM to E-SIM.')
@@ -234,6 +313,8 @@ def work():
         change()
     elif q==3:
         work3()
+    elif q==4:
+        work4()
 def work1(g):
     global p
     print('\n')
