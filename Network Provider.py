@@ -1,20 +1,21 @@
 m='your'
+ch=True
 def change():
     global ch
     ch=False
     work1(m)
-    pn=p
+    pn=pk
     j='new'
     work1(j)
-    pm=p
+    pm=pk
     print(f"Your previous plan cost: ₹{pn}")
     print(f"Your new plan cost: ₹{pm}")
     if pn>pm:
-        print(f"You will be refunded ₹{pn-pm}")
+        print(f"You will be refunded: ₹{pn-pm}")
         ch=True
         opt()
     elif pn<pm:
-        print(f"You will be charged ₹{pm-pn}")
+        print(f"You will be charged: ₹{pm-pn}")
         ch=True
         opt()
     else:
@@ -48,6 +49,7 @@ def acc():
     print("Thank you for registering with us.")
     opt()
 def bill():
+    global pk
     print("Options: ")
     print("1.Monthly")
     print("2.Yearly")
@@ -68,12 +70,14 @@ def bill():
         print("Rgistered number: ",num)
         print("Bill sent to: ",mail)
         print(f"Total bill: ₹{p}")
+        pk=p
     elif t==2:
         print("Activated at: ",add)
         print("Rgistered number: ",num)
         print("Bill sent to: ",mail)
         print(f"Total bill: ₹{p*12}")
         print(f"Discounted bill: ₹{int((p*12)*0.8)}")
+        pk=int((p*12)*0.8)
     print("Thank you for choosing us.")
     if ch==True:
         opt()
