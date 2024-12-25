@@ -1,3 +1,26 @@
+m='your'
+def change():
+    global ch
+    ch=False
+    work1(m)
+    pn=p
+    j='new'
+    work1(j)
+    pm=p
+    print(f"Your previous plan cost: ₹{pn}")
+    print(f"Your new plan cost: ₹{pm}")
+    if pn>pm:
+        print(f"You will be refunded ₹{pn-pm}")
+        ch=True
+        opt()
+    elif pn<pm:
+        print(f"You will be charged ₹{pm-pn}")
+        ch=True
+        opt()
+    else:
+        print("No changes made.")
+        ch=True
+        opt()
 def acc():
     global add
     global num
@@ -52,15 +75,18 @@ def bill():
         print(f"Total bill: ₹{p*12}")
         print(f"Discounted bill: ₹{int((p*12)*0.8)}")
     print("Thank you for choosing us.")
-    opt()
+    if ch==True:
+        opt()
 def work():
     if q==1:
-        work1()
+        work1(m)
     elif q==6:
         work6()
     elif q==5:
         acc()
-def work1():
+    elif q==2:
+        change()
+def work1(g):
     global p
     print('\n')
     print("Monthly Pricing: ")
@@ -70,7 +96,7 @@ def work1():
     print("4.300 Mbps-₹1299")
     print(f"Friendly reminder, yearly plans offer 20% discount.")
     while True:
-        a1=input("Enter preference: ")
+        a1=input(f"Enter {g} preference: ")
         if a1.isdigit():
             a1=int(a1)
             if 1<=a1<=4:
@@ -95,7 +121,7 @@ def work1():
     print('3.Access Point-₹299') 
     print('4.Router-₹499')
     while True:
-        a2=input("Enter preference: ")
+        a2=input(f"Enter {g} preference: ")
         if a2.isdigit():
             a2=int(a2)
             if 1<=a2<=4:
