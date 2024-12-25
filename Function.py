@@ -147,7 +147,7 @@ def opt():
     global q
     print("Options: ")
     print("1.Wi-Fi Installation.")
-    print('2.Upgrade your internet plan.')
+    print('2.Update your internet plan.')
     print('3.Upgrade physical SIM to E-SIM.')
     print('4.Why us?')
     print('5.Account')
