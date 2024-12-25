@@ -56,9 +56,9 @@ def bill():
 def work():
     if q==1:
         work1()
-    elif q==7:
-        work7()
     elif q==6:
+        work6()
+    elif q==5:
         acc()
 def work1():
     global p
@@ -114,7 +114,7 @@ def work1():
     elif a2==4:
         p+=499
     bill()
-def work7():
+def work6():
     print("Thank you for choosing us.")
     print("We are a leading internet service provider in India. We offer a wide range of services and plans to suit your needs. Our services include Wi-Fi installation, internet plan upgrades, E-SIM activation, and location updates. We also offer a variety of add-ons such as exclusive OTT content, access points, and routers. Our plans are competitively priced and offer great value for money. We are committed to providing you with the best internet experience possible. Choose us for fast, reliable, and affordable internet service.")               
 def opt():
@@ -123,10 +123,9 @@ def opt():
     print("1.Wi-Fi Installation.")
     print('2.Upgrade your internet plan.')
     print('3.Upgrade physical SIM to E-SIM.')
-    print('4.Update your location.')
-    print('5.Why us?')
-    print('6.Account')
-    print("7.Exit")
+    print('4.Why us?')
+    print('5.Account')
+    print("6.Exit")
     while True:
         q=input("Select serivce: ")
         if q.isdigit():
