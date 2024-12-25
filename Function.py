@@ -2,12 +2,27 @@ def acc():
     global add
     global num
     global mail
-    add=input("Address: ")
-    print(add)
-    num=input("Mobile number: ")
-    print(num)
-    mail=input("Email: ")
-    print(mail)
+    add=input("Enter address: ")
+    while True:
+        num=input("Enter number: ")
+        if num.isdigit():
+            num=int(num)
+            k=str(num)
+            if len(k)==10:
+                print(f"Valid")
+                break
+            else:
+                print("Enter a valid number.")
+        else:
+            print("Enter a valid number.")
+    while True:
+        mail=input("Enter email address: ")
+        if '@' in mail and '.' in mail and not mail.startswith('@') and not mail.startswith('.') and not mail.endswith('@') and not mail.endswith('.') and not mail[-1].isdigit() and mail.count("@")==1:
+            print(f"Valid")
+            break
+        else:
+            print("Enter a valid email address.")
+    print("Thank you for registering with us.")
     opt()
 def bill():
     print("Options: ")
