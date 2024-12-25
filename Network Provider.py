@@ -1,3 +1,145 @@
+def val(pro, valopt):
+    while True:
+        try:
+            userin = int(input(pro))
+            if userin in valopt:
+                return userin
+            else:
+                print("Please choose a valid number.")
+        except ValueError:
+            print("Please enter a valid number.")
+
+def work3():
+    global p
+    print('1.Upgrade physical SIM to E-SIM.')
+    print('2.Change the E-SIM package.')
+    print('3.FAQs regarding E-SIM.')
+    print('4.Benefits of E-SIM.')
+    x = val("Enter option:",[1, 2, 3, 4])
+    
+    if x == 1:
+        print('1. keep same number')
+        print('2. change number')
+        print('3. View package option')
+        print('4. Back')
+        y = val("Enter option:",[1, 2, 3, 4])
+        
+        if y == 1:
+            print("Price = Rs.500")
+            p=500
+            bill()
+        
+        elif y == 2:
+            print('Price to change number = Rs.750')
+            new = int(input('enter new number :' ))
+            new2 = int(input('confirm new number :'))
+            p=750
+            if new == new2:
+                print("your number is successfully changed")
+                bill()
+            else:
+                print('reenter new number')
+                new = int(input('enter new number :'))
+                new2 = int(input('confirm new number :'))
+        
+        elif y == 3:
+            
+            print('1. Basic eSIM Package (Low Data Use)')
+            print('2. Standard eSIM Package (Moderate Use)')
+            print('3. Premium eSIM Package (High Data Use)')
+            package=val("Enter option:",[1, 2, 3])
+            
+            if package==1:
+                print('Basic eSIM Package inclueds: \n \t -->1GB of data (valid for 30 days) \n \t -->Unlimited texting \n \t -->100 minutes of local calls\n \t -->Basic customer support')
+                print("\033[1m\033[4mPrice: ₹50 per month\033[0m ") # to make letters bold and underline them
+                p=50
+                bill()
+            if package==2:
+                print('Standard eSIM Package inclueds :\n \t -->3GB of data (valid for 30 days)\n \t -->Unlimited texting and calls within the home network\n \t -->50 minutes of international calls\n \t -->Priority customer support')
+                print("\033[1m\033[4mPrice: ₹150 per month\033[0m ") # to make letters bold and underline them
+                p=150
+                bill()
+            if package==3:
+                print('Premium eSIM Package inclueds :\n \t -->10GB of high-speed data (valid for 30 days)\n \t -->Unlimited texting and calls within the home network\n \t -->Premium customer support with faster response times')
+                print("\033[1m\033[4mPrice: ₹300 per month\033[0m ") # to make letters bold and underline them
+                p=300
+                bill()
+        
+        elif y == 4:
+            # Optional action when going back
+            pass
+        
+        else:
+            # If an invalid option for changing sim is entered, do not print "page not found"
+            print("Invalid option! Please choose a valid option.")
+    
+    elif x == 2:
+        print("1. the basic eSIM card plan offering 1GB of global data")
+        print("2. the basic eSIM card plan offering 3GB of global data")
+        z = val("Enter option:",[1, 2])
+        
+        if z == 1:
+            print('charge = ₹40 (monthly)')
+            p=40
+            bill()
+        
+        elif z == 2:
+            print("charge = ₹120 (monthly)")
+            p=120
+            bill()
+        
+        else:
+            print("Package not available.")
+    
+    elif x == 3:
+        print('1. What is an eSIM?')
+        print('2. How is an eSIM different from a physical SIM card?')
+        print('3. What devices support eSIM?')
+        print('4. Is an eSIM transferable between devices?')
+        print('5. Does eSIM support roaming?')
+        m = val("Enter question number:",[1, 2, 3, 4, 5])
+        
+        if m == 1:
+            print('An eSIM (embedded SIM) is a digital SIM embedded into your device, allowing you to connect to a mobile network without needing a physical SIM card')
+        
+        elif m == 2:
+            print('Unlike a physical SIM card, an eSIM is built into the device and can be programmed remotely, eliminating the need for swapping physical cards.')
+        
+        elif m == 3:
+            print('Many modern smartphones, tablets, smartwatches, and IoT devices support eSIM technology, such as the latest iPhone, Samsung Galaxy, Google Pixel devices, and some wearables like Apple Watch.')
+        
+        elif m == 4:
+            print('No, eSIM profiles are generally tied to a specific device. You’ll need to contact your carrier to move the eSIM to a new device.')
+        
+        elif m == 5:
+            print('Yes, eSIM supports international roaming just like physical SIM cards, as long as your carrier provides the service.')
+
+        else:
+            print("Invalid question number! Please select a valid option.")
+    
+    elif x == 4:
+        print('benefits of eSIM :\n')
+        print('1. Convenience\n2. Supports Multiple Profiles\n3. Dual-SIM Functionality\n4. Durability')
+        B = int(input('enter option for which you would like to know more'))
+        
+        if B == 1:
+            print('--> No need to physically insert or swap SIM card.\n--> Easy to set up and activate via QR codes or carrier apps.\n--> Useful for frequent travelers who need to switch between carriers or plans.')
+        
+        elif B == 2:
+            print('--> Store multiple carrier profiles on a single eSIM, such as personal and work numbers or international plans.\n--> Switch between profiles without requiring a new SIM card.')
+        
+        elif B == 3:
+            print('--> Many devices support using an eSIM alongside a physical SIM, allowing dual-SIM functionality.\n--> Useful for managing two phone numbers or networks simultaneously.')
+        
+        elif B == 4:
+            print('--> No moving parts like physical SIMs, which can be damaged, lost, or wear out.\n--> Ideal for rugged devices used in extreme conditions, such as smartwatches and IoT devices.')
+        
+        else:
+            print("Invalid option for benefits. Please choose a valid number.")
+    
+    else:
+        print("Invalid option! Please choose a valid option.")    
+    opt()
 m='your'
 ch=True
 def change():
@@ -90,6 +232,8 @@ def work():
         acc()
     elif q==2:
         change()
+    elif q==3:
+        work3()
 def work1(g):
     global p
     print('\n')
@@ -152,7 +296,7 @@ def opt():
     print("Options: ")
     print("1.Wi-Fi Installation.")
     print('2.Update your internet plan.')
-    print('3.Upgrade physical SIM to E-SIM.')
+    print('3.E-SIM.')
     print('4.Why us?')
     print('5.Account')
     print("6.Exit")
