@@ -8,7 +8,6 @@ def val(pro, valopt):
                 print("Please choose a valid number.")
         except ValueError:
             print("Please enter a valid number.")
-
 def work4():
     print('Why Choose Us for WiFi Installation?')
     print('1. Expertise and Experience')
@@ -89,6 +88,7 @@ def work4():
             print('choosed info is not available ')
     opt()
 def work3():
+    global a
     global p
     print('1.Upgrade physical SIM to E-SIM.')
     print('2.Change the E-SIM package.')
@@ -110,17 +110,33 @@ def work3():
         
         elif y == 2:
             print('Price to change number = Rs.750')
-            new = int(input('enter new number :' ))
-            new2 = int(input('confirm new number :'))
+            while True:
+                new=input("Enter number: ")
+                if new.isdigit():
+                    a=str(new)
+                    if len(a)==10:
+                        print(f"Valid")
+                        break
+                    else:
+                        print("Enter a valid number.")
+                else:
+                    print("Enter a valid number.")
+            while True:
+                new2=input("Re-enter number: ")
+                if new2.isdigit():
+                    k=str(new2)
+                    if len(k)==10:
+                        if k==a:
+                            print("Number changed successfully.")
+                            break
+                        else:
+                            print("Numbers do not match.")
+                    else:
+                        print("Enter a valid number.")
+                else:
+                    print("Enter a valid number.")
             p=750
-            if new == new2:
-                print("your number is successfully changed")
-                bill()
-            else:
-                print('reenter new number')
-                new = int(input('enter new number :'))
-                new2 = int(input('confirm new number :'))
-        
+            bill()        
         elif y == 3:
             
             print('1. Basic eSIM Package (Low Data Use)')
