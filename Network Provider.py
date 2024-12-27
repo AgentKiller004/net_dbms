@@ -237,6 +237,71 @@ def work3():
     opt()
 m='your'
 ch=True
+def work6():
+    global p
+    print('Choose plan: ')
+    print('1.Data Plan')
+    print('2.Talktime Plan')
+    x=val("Enter option:",[1, 2])
+    if x==1:
+        print('i.1GB/existing plan-₹29')
+        print('ii.2GB/existing plan-₹49')
+        print('iii.5GB/existing plan-₹99')
+        print('iv.Unlimited/1 day-₹149')
+        print('v.Unlimited/7 days-₹299')
+        y=val("Enter option:",[1, 2, 3, 4, 5])
+        if y==1:
+            print('1GB/existing plan-₹29')
+            p=29
+            bill()
+        elif y==2:
+            print('2GB/existing plan-₹49')
+            p=49
+            bill()
+        elif y==3:
+            print('5GB/existing plan-₹99')
+            p=99
+            bill()
+        elif y==4:
+            print('Unlimited/1 day-₹149')
+            p=149
+            bill()
+        elif y==5:
+            print('Unlimited/7 days-₹299')
+            p=299
+            bill()
+    elif x==2:
+        print('i.Unlimited talktime, 100 SMS/day, 1GB data/day-₹199')
+        print('ii.Unlimited talktime, 100 SMS/day, 2GB data/day-₹299')
+        print('iii.Unlimited talktime, 200 SMS/day, 3GB data/day-₹399')
+        print('iv.Unlimited talktime, 200 SMS/day, 5GB data/day-₹499')
+        print('v.Unlimited talktime, 200 SMS/day, Unlimited data/day-₹599')
+        print('vi.Unlimited talktime, Unlimited SMS/day, Unlimited data/day-₹899')
+        z=val("Enter option:",[1, 2, 3, 4, 5, 6])
+        if z==1:
+            print('Unlimited talktime, 100 SMS/day, 1GB data/day-₹199')
+            p=199
+            bill()
+        elif z==2:
+            print('Unlimited talktime, 100 SMS/day, 2GB data/day-₹299')
+            p=299
+            bill()
+        elif z==3:
+            print('Unlimited talktime, 200 SMS/day, 3GB data/day-₹399')
+            p=399
+            bill()
+        elif z==4:
+            print('Unlimited talktime, 200 SMS/day, 5GB data/day-₹499')
+            p=499
+            bill()
+        elif z==5:
+            print('Unlimited talktime, 200 SMS/day, Unlimited data/day-₹599')
+            p=599
+            bill()
+        elif z==6:
+            print('Unlimited talktime, Unlimited SMS/day, Unlimited data/day-₹899')
+            p=899
+            bill()
 def change():
     global ch
     ch=False
@@ -286,6 +351,7 @@ def acc():
     print("Thank you for registering with us.")
     opt()
 def bill():
+    global p
     global pk
     print("Options: ")
     print("1.Monthly")
@@ -321,8 +387,8 @@ def bill():
 def work():
     if q==1:
         work1(m)
-    elif q==6:
-        work6()
+    elif q==7:
+        work7()
     elif q==5:
         acc()
     elif q==2:
@@ -331,6 +397,8 @@ def work():
         work3()
     elif q==4:
         work4()
+    elif q==6:
+        work6()
 def work1(g):
     global p
     print('\n')
@@ -385,7 +453,7 @@ def work1(g):
     elif a2==4:
         p+=499
     bill()
-def work6():
+def work7():
     print("Thank you for choosing us.")
     print("We are a leading internet service provider in India. We offer a wide range of services and plans to suit your needs. Our services include Wi-Fi installation, internet plan upgrades, E-SIM activation, and location updates. We also offer a variety of add-ons such as exclusive OTT content, access points, and routers. Our plans are competitively priced and offer great value for money. We are committed to providing you with the best internet experience possible. Choose us for fast, reliable, and affordable internet service.")               
 def opt():
@@ -396,7 +464,8 @@ def opt():
     print('3.E-SIM.')
     print('4.Why us?')
     print('5.Account')
-    print("6.Exit")
+    print('6.Recharge Number')
+    print("7.Exit")
     while True:
         q=input("Select serivce: ")
         if q.isdigit():
