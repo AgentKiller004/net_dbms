@@ -20,7 +20,7 @@ def work4():
     if info==1:
         print('1. Highly Qualified Technicians')
         print('2. Proven Track Record')
-        O=val("choose: ",[1, 2])
+        O=val("Choose: ",[1, 2])
         
         if O==1:
             print('\t-->Technicians with extensive training and industry certifications.\n \t -->Years of hands-on experience with different WiFi technologies and setups.')
@@ -32,9 +32,9 @@ def work4():
             print('choosed info is not available ')
     
     elif info==2:
-        print('1. Tailored WiFi Setup')
-        print('2. Support for Various Devices')
-        C=val("choose: ",[1, 2])
+        print('1.Tailored Wi-Fi Setup')
+        print('2.Support for Various Devices')
+        C=val("Choose: ",[1, 2])
         
         if C==1:
             print('\t--> Analysis of the specific layout and needs of your space before installation.\n \t --> Recommendations for optimal router placement to ensure maximum coverage.')
@@ -48,7 +48,7 @@ def work4():
     elif info==3:
         print ('1. Use of Latest Equipment')
         print('2. Seamless Connectivity')
-        A=val("choose: ",[1, 2])
+        A=val("Choose: ",[1, 2])
         
         if A==1:
             print ('\t--> Deployment of the latest WiFi routers and repeaters for optimal performance.\n \t-->Integration of advanced technology like WiFi 6 or mesh networks for better speed and coverage')
@@ -62,7 +62,7 @@ def work4():
     elif info==4:
         print('1. Competitive Pricing Models')
         print('2. Cost-Effective Solutions')
-        F=val("choose: ",[1, 2])
+        F=val("Choose: ",[1, 2])
         
         if F==1:
             print("\t-->Transparent and upfront pricing with no hidden fees.\n \t -->Flexible plans based on the scope of your WiFi needs (residential, commercial, enterprise).")
@@ -76,7 +76,7 @@ def work4():
     elif info==5:
         print('1. Secure Network Setup')
         print('2. Safe Installation Practices')
-        S=val("choose: ",[1, 2])
+        S=val("Choose: ",[1, 2])
         
         if S==1:
             print('\t--> Implementation of strong encryption (WPA3, VPN, etc.) to protect your WiFi from unauthorized access.\n \t--> Advice on network privacy and security best practices.')
@@ -97,10 +97,10 @@ def work3():
     x = val("Enter option:",[1, 2, 3, 4])
     
     if x == 1:
-        print('1. keep same number')
-        print('2. change number')
-        print('3. View package option')
-        print('4. Back')
+        print('1.Keep same number.')
+        print('2.Change number.')
+        print('3.View package option.')
+        print('4.Back')
         y = val("Enter option:",[1, 2, 3, 4])
         
         if y == 1:
@@ -109,7 +109,7 @@ def work3():
             bill()
         
         elif y == 2:
-            print('Price to change number = Rs.750')
+            print('Price to change number. = Rs.750')
             while True:
                 new=input("Enter number: ")
                 if new.isdigit():
@@ -139,23 +139,32 @@ def work3():
             bill()        
         elif y == 3:
             
-            print('1. Basic eSIM Package (Low Data Use)')
-            print('2. Standard eSIM Package (Moderate Use)')
-            print('3. Premium eSIM Package (High Data Use)')
+            print('1. Basic E-SIM Package (Low Data Use)')
+            print('2. Standard E-SIM Package (Moderate Use)')
+            print('3. Premium E-SIM Package (High Data Use)')
             package=val("Enter option:",[1, 2, 3])
             
             if package==1:
-                print('Basic eSIM Package inclueds: \n \t -->1GB of data (valid for 30 days) \n \t -->Unlimited texting \n \t -->100 minutes of local calls\n \t -->Basic customer support')
-                print("\033[1m\033[4mPrice: ₹50 per month\033[0m ") # to make letters bold and underline them
+                print('''Basic E-SIM Package includes:
+                        \n \t -->1GB of Data (Valid for 30 days) 
+                        \n \t -->Unlimited texting.
+                        \n \t -->100 minutes of local calls.\n \t -->Basic customer support.''')
+                print("\033[1m\033[4mPrice: ₹50/month\033[0m ") # to make letters bold and underline them
                 p=50
                 bill()
             if package==2:
-                print('Standard eSIM Package inclueds :\n \t -->3GB of data (valid for 30 days)\n \t -->Unlimited texting and calls within the home network\n \t -->50 minutes of international calls\n \t -->Priority customer support')
-                print("\033[1m\033[4mPrice: ₹150 per month\033[0m ") # to make letters bold and underline them
+                print('''Standard E-SIM Package includes :
+                        \n \t -->3GB of Data (v\Valid for 30 days)
+                        \n \t -->Unlimited texting and calls within the registered circle.
+                        \n \t -->50 minutes of international calls.\n \t -->Priority customer support.''')
+                print("\033[1m\033[4mPrice: ₹150/month\033[0m ") # to make letters bold and underline them
                 p=150
                 bill()
             if package==3:
-                print('Premium eSIM Package inclueds :\n \t -->10GB of high-speed data (valid for 30 days)\n \t -->Unlimited texting and calls within the home network\n \t -->Premium customer support with faster response times')
+                print('''Premium E-SIM Package includes :
+                        \n \t -->10GB of High-Speed Data (Valid for 30 days)
+                        \n \t -->Unlimited texting and calls within the registered circle.
+                        \n \t -->Premium customer support with faster response times.''')
                 print("\033[1m\033[4mPrice: ₹300 per month\033[0m ") # to make letters bold and underline them
                 p=300
                 bill()
@@ -169,17 +178,17 @@ def work3():
             print("Invalid option! Please choose a valid option.")
     
     elif x == 2:
-        print("1. the basic eSIM card plan offering 1GB of global data")
-        print("2. the basic eSIM card plan offering 3GB of global data")
+        print("1. The basic E-SIM card plan offering 1GB of global data.")
+        print("2. The basic E-SIM card plan offering 3GB of global data.")
         z = val("Enter option:",[1, 2])
         
         if z == 1:
-            print('charge = ₹40 (monthly)')
+            print('Charge = ₹40 (monthly)')
             p=40
             bill()
         
         elif z == 2:
-            print("charge = ₹120 (monthly)")
+            print("Charge = ₹120 (monthly)")
             p=120
             bill()
         
@@ -187,11 +196,11 @@ def work3():
             print("Package not available.")
     
     elif x == 3:
-        print('1. What is an eSIM?')
-        print('2. How is an eSIM different from a physical SIM card?')
-        print('3. What devices support eSIM?')
-        print('4. Is an eSIM transferable between devices?')
-        print('5. Does eSIM support roaming?')
+        print('1. What is an E-SIM?')
+        print('2. How is an E-SIM different from a physical SIM card?')
+        print('3. What devices support E-SIM?')
+        print('4. Is an E-SIM transferable between devices?')
+        print('5. Does E-SIM support roaming?')
         m = val("Enter question number:",[1, 2, 3, 4, 5])
         
         if m == 1:
@@ -204,7 +213,7 @@ def work3():
             print('Many modern smartphones, tablets, smartwatches, and IoT devices support eSIM technology, such as the latest iPhone, Samsung Galaxy, Google Pixel devices, and some wearables like Apple Watch.')
         
         elif m == 4:
-            print('No, eSIM profiles are generally tied to a specific device. You’ll need to contact your carrier to move the eSIM to a new device.')
+            print('No, eSIM profiles are generally tied to a specific device. You will need to contact your carrier to move the eSIM to a new device.')
         
         elif m == 5:
             print('Yes, eSIM supports international roaming just like physical SIM cards, as long as your carrier provides the service.')
@@ -459,9 +468,9 @@ def work7():
 def opt():
     global q
     print("Options: ")
-    print("1.Wi-Fi Installation.")
+    print("1.Wi-Fi Installation")
     print('2.Update your internet plan.')
-    print('3.E-SIM.')
+    print('3.E-SIM')
     print('4.Why us?')
     print('5.Account')
     print('6.Recharge Number')
