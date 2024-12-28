@@ -154,7 +154,7 @@ def work3():
                 bill()
             if package==2:
                 print('''Standard E-SIM Package includes :
-                        \n \t -->3GB of Data (v\Valid for 30 days)
+                        \n \t -->3GB of Data (Valid for 30 days)
                         \n \t -->Unlimited texting and calls within the registered circle.
                         \n \t -->50 minutes of international calls.\n \t -->Priority customer support.''')
                 print("\033[1m\033[4mPrice: ₹150/month\033[0m ") # to make letters bold and underline them
@@ -352,7 +352,14 @@ def acc():
             print("Enter a valid number.")
     while True:
         mail=input("Enter email address: ")
-        if '@' in mail and '.' in mail and not mail.startswith('@') and not mail.startswith('.') and not mail.endswith('@') and not mail.endswith('.') and not mail[-1].isdigit() and mail.count("@")==1:
+        if ('@' in mail and 
+            '.' in mail and not 
+            mail.startswith('@') and not 
+            mail.startswith('.') and not 
+            mail.endswith('@') and not 
+            mail.endswith('.') and not 
+            mail[-1].isdigit() and 
+            mail.count("@")==1):
             print(f"Valid")
             break
         else:
